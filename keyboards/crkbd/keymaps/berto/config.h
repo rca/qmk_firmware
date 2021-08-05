@@ -44,3 +44,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+
+/**
+ * define EE_HANDS in order to be able to plug the right half of the keyboard to the computer.
+ * otherwise that half thinks it's the left side and the entire keyboard is a mirror image of
+ * what it should be.
+ *
+ * in order to use this, each half of the firmware needs to be compile specifically for the
+ * right or left halves:
+ *
+ * ```
+ * qmk flash -kb crkbd -km berto -bl dfu-split-left
+ * qmk flash -kb crkbd -km berto -bl dfu-split-right
+ * ```
+ */
+#define EE_HANDS
