@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LALT, XXXXXXX, XXXXXXX, XXXXXXX, KC_END, KC_PGDN,                      XXXXXXX, KC_BSLS, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LCTL,   KC_LGUI,  KC_LSFT,     XXXXXXX, KC_DEL, XXXXXXX
+                                          KC_LCTL,   KC_LGUI,  KC_LSFT,     KC_LEAD, KC_DEL, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -69,6 +69,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+    LEADER_DICTIONARY() {
+        leading = false;
+        leader_end();
+
+        // testing out the leader key
+        SEQ_ONE_KEY(KC_T) {
+            SEND_STRING("YAY, working leader key!");
+        }
+    }
+}
 
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {

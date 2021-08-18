@@ -30,6 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL_PD2
 
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 300
+
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 137
 
