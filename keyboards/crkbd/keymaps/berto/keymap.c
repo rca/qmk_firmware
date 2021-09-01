@@ -77,9 +77,14 @@ void matrix_scan_user(void) {
         leading = false;
         leader_end();
 
-        // testing out the leader key
-        SEQ_ONE_KEY(KC_T) {
-            SEND_STRING("YAY, working leader key!");
+        // re-debug tests in pycharm
+        SEQ_ONE_KEY(KC_D) {
+            SEND_STRING(SS_LCTL("5")SS_LCTL(SS_TAP(X_F5)));
+        }
+
+        // re-run tests in pycharm
+        SEQ_ONE_KEY(KC_R) {
+            SEND_STRING(SS_LCTL("4")SS_LCTL(SS_TAP(X_F5)));
         }
     }
 }
