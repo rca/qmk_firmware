@@ -1,3 +1,5 @@
 LEADER_ENABLE = yes
 
 OLED_DRIVER_ENABLE  = yes
+
+COMBO_ENABLE = yes

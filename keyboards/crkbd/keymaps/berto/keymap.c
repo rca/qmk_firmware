@@ -89,6 +89,32 @@ void matrix_scan_user(void) {
     }
 }
 
+
+/**
+ * setup key combos
+ */
+
+enum combos {
+    ESC_Q_SENDS_TAB,
+    P_BS_SENDS_DEL,
+};
+
+const uint16_t PROGMEM esc_q_combo[] = {KC_ESC, KC_Q, COMBO_END};
+const uint16_t PROGMEM p_bs_combo[] = {KC_P, KC_BSPC, COMBO_END};
+
+/**
+ * TODO: YOU MUST REMEMBER TO UPDATE COMBO_COUNT IN config.h
+ */
+combo_t key_combos[] = {
+    [ESC_Q_SENDS_TAB] = COMBO(esc_q_combo, KC_TAB),
+    [P_BS_SENDS_DEL] = COMBO(p_bs_combo, KC_DEL),
+};
+
+
+/*
+ * below is auto-generated code from creating the keymap
+ */
+
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   if (!is_keyboard_master()) {
