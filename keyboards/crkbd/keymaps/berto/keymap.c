@@ -86,6 +86,11 @@ void matrix_scan_user(void) {
         SEQ_ONE_KEY(KC_R) {
             SEND_STRING(SS_LCTL("4")SS_LCTL(SS_TAP(X_F5)));
         }
+
+        // selectable area screenshot to clipboard
+        SEQ_ONE_KEY(KC_F4) {
+            SEND_STRING(SS_LCTL(SS_LGUI("$")));
+        }
     }
 }
 
