@@ -94,21 +94,29 @@ void matrix_scan_user(void) {
  * setup key combos
  */
 
-enum combos {
-    ESC_Q_SENDS_TAB,
-    P_BS_SENDS_DEL,
-};
+// enum combos {
+//     // O_P_SENDS_BSPC,
+//     // NINE_ZERO_SENDS_DEL,
+//     // NINE_ZERO_SENDS_BSPC,
+//     // L_SEMI_SENDS_QUOT,
+//     // DOT_SLASH_SENDS_ENTER,
+// };
 
-const uint16_t PROGMEM esc_q_combo[] = {KC_ESC, KC_Q, COMBO_END};
-const uint16_t PROGMEM p_bs_combo[] = {KC_P, KC_BSPC, COMBO_END};
+// // const uint16_t PROGMEM o_p_combo[] = {KC_O, KC_P, COMBO_END};
+// // const uint16_t PROGMEM nine_zero_combo[] = {KC_9, KC_0, COMBO_END};
+// // const uint16_t PROGMEM l_semi_combo[] = {KC_L, KC_SCLN, COMBO_END};
+// // const uint16_t PROGMEM dot_slash_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
 
-/**
- * TODO: YOU MUST REMEMBER TO UPDATE COMBO_COUNT IN config.h
- */
-combo_t key_combos[] = {
-    [ESC_Q_SENDS_TAB] = COMBO(esc_q_combo, KC_TAB),
-    [P_BS_SENDS_DEL] = COMBO(p_bs_combo, KC_DEL),
-};
+// /**
+//  * TODO: YOU MUST REMEMBER TO UPDATE COMBO_COUNT IN config.h
+//  */
+// combo_t key_combos[] = {
+//     //[O_P_SENDS_BSPC] = COMBO(o_p_combo, KC_BSPC),
+//     //[NINE_ZERO_SENDS_DEL] = COMBO(nine_zero_combo, KC_DEL),
+//     //[NINE_ZERO_SENDS_BSPC] = COMBO(nine_zero_combo, KC_BSPC),
+//     // [L_SEMI_SENDS_QUOT] = COMBO(l_semi_combo, KC_QUOT),
+//     // [DOT_SLASH_SENDS_ENTER] = COMBO(dot_slash_combo, KC_ENT),
+// };
 
 
 /*
